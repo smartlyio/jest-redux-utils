@@ -9,7 +9,9 @@
   "scripts": {
     "clean": "rm -rf dist",
     "build": "tsc",
-    "watch": "tsc --watch"
+    "watch": "tsc --watch",
+    "test": "jest --coverage",
+    "prepublishOnly": "npm build"
   },
   "devDependencies": {
     "@types/flux-standard-action": "^0.5.31",
