@@ -23,6 +23,8 @@ export default function reducer(state: State = DEFAULT_STATE, action: Action): S
       return { ...state, b: action.payload };
     case "SET_D":
       return { ...state, d: action.payload };
+    default:
+      return state;
   }
 }
 

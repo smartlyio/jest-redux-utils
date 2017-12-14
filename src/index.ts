@@ -20,9 +20,7 @@ export class ReducerTestContext<S> {
   }
 
   public snapshotAction(action: Action, payloadName?: string): void {
-    const actionName = `${action.type}(${payloadName ||
-      JSON.stringify(action.payload)})`;
-    describe(actionName, () => {
+    describe(this.actionName(action, payloadName), () => {
       it("matches snapshot", async () => {
         const store = this.makeStore(this.defaultState);
         await Promise.resolve(store.dispatch(action));
@@ -37,8 +35,11 @@ export class ReducerTestContext<S> {
       store.dispatch(action);
       return store.getState();
     });
-    it("matches snapshot", () => {
-      expect(states).toMatchSnapshot();
+    const actionNames = actions.map(action => this.actionName(action));
+    describe(`(sequence) ${actionNames}`, () => {
+      it("matches snapshot", () => {
+        expect(states).toMatchSnapshot();
+      });
     });
   }
 
@@ -52,6 +53,10 @@ export class ReducerTestContext<S> {
     it("has unchanged default state", () => {
       expect(this.defaultState).toMatchSnapshot();
     });
+  }
+
+  private actionName(action: Action, payloadName?: string) {
+    return `${action.type}(${payloadName || JSON.stringify(action.payload)})`;
   }
 }
 
