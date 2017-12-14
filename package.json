@@ -6,6 +6,11 @@
   "repository": "git@github.com:smartlyio/jest-redux-utils.git",
   "author": "Sami Kukkonen <sami@smartly.io>",
   "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "tsc",
+    "watch": "tsc --watch"
+  },
   "devDependencies": {
     "@types/jest": "^21.1.8",
     "jest": "^21.2.1",
