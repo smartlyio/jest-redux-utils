@@ -1,11 +1,11 @@
 import { Reducer, Store, createStore } from "redux";
 
-export interface Action {
-  type: any;
-  payload: any;
-};
+export type Action = {
+  type: any,
+  payload: any
+}
 
-export default class ReducerTestContext<S> {
+export class ReducerTestContext<S> {
   constructor(
     private readonly reducer: Reducer<S>,
     private readonly defaultState: S
@@ -55,7 +55,7 @@ export default class ReducerTestContext<S> {
   }
 }
 
-export function reducerTest<S>(
+export default function reducerTest<S>(
   reducer: Reducer<S | undefined>,
   defaultState?: S
 ) {

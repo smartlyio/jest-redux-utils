@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`reducer SET_A("other a") matches snapshot 1`] = `
+Object {
+  "a": "other a",
+  "d": 0,
+}
+`;
+
+exports[`reducer matches snapshot 1`] = `
+Array [
+  Object {
+    "a": "a",
+    "b": Object {
+      "c": true,
+    },
+    "d": 0,
+  },
+  Object {
+    "a": "some other",
+    "b": Object {
+      "c": true,
+    },
+    "d": 0,
+  },
+]
+`;
