@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`reducer (sequence) SET_B({"c":true}),SET_A("some other") matches snapshot 1`] = `
+exports[`Example reducer (sequence) SET_B({"c":true}),SET_A("some other") matches snapshot 1`] = `
 Array [
   Object {
     "a": "a",
@@ -19,7 +19,7 @@ Array [
 ]
 `;
 
-exports[`reducer SET_A("other a") matches snapshot 1`] = `
+exports[`Example reducer SET_A("other a") matches snapshot 1`] = `
 Object {
   "a": "other a",
   "d": 0,
