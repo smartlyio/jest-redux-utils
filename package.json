@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Utilities for testing Redux reducers with Jest snapshots",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "repository": "git@github.com:smartlyio/jest-redux-utils.git",
   "author": "Sami Kukkonen <sami@smartly.io>",
   "license": "MIT",
