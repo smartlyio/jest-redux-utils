@@ -4,7 +4,7 @@ pipeline {
   agent any
   options {
     timestamps()
-    timeout(time:5, unit:'MINUTES', activty: true)
+    timeout(time:5, unit:'MINUTES', activity: true)
     disableConcurrentBuilds()
   }
   environment {
