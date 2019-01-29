@@ -7,9 +7,6 @@ pipeline {
     timeout(time:5, unit:'MINUTES', activity: true)
     disableConcurrentBuilds()
   }
-  environment {
-
-  }
   stages {
     stage('Build test image') {
       steps {
